@@ -20,4 +20,17 @@ Margin: Area transparan penolak tetangga di luar pagar.
 Karakteristik Margin: Punya kelebihan bisa diisi angka negatif (untuk efek elemen bertumpuk) dan keajaiban nilai auto (rahasia jadul untuk mendorong kotak persis ke titik tengah layar).
 Karakteristik Padding: Jarak napas untuk memperluas ruangan dari dalam, haram menggunakan angka negatif.
 3D Box Model Visualizer:
-tools.belajarwebdev.id
+tools.belajarwebdev.
+
+Menegaskan pagar pembatas, serta menyelesaikan isu historis di mana browser selalu salah menghitung lebar elemen yang sebenarnya.
+
+Border: Mengombinasikan width (tebal), style (solid/titik/putus-putus), dan color untuk mempercantik batas luar elemen.
+Outline: Pagar bayangan. Mirip border, namun ia melayang dan tidak memakan kapasitas ukuran ruangan di sekitarnya.
+Perhitungan Dimensi Klasik: Mengungkap bahwa jika kalian memesan kotak selebar 100px, aslinya kotak kalian akan melebar jauh lebih besar akibat tambahan padding dan border.
+Box Sizing (border-box): Mantra pengubah segalanya di era CSS modern. Memerintahkan box-sizing: border-box agar dimensi padding dan border disusutkan merangsek ke dalam. Lebar pesanan kalian akan tetap absolut, tak peduli setebal apa pagarnya.
+
+
+
+
+
+
