@@ -23,11 +23,12 @@
             border-radius: 15px;
             margin-bottom: 10px;
             cursor: pointer;
+            transition: all 0.2s ease;
         }
 
         img[src="sneakers.png"]:hover{
-            scale: calc(0.98);
-            box-shadow: 0 0 25px red;
+            transform: scale(0.95);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
         }
 
         .name{
@@ -40,6 +41,8 @@
         h2{
             text-transform: capitalize;
             font-weight: 750;
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
         .price{
             font-weight: 800;
@@ -52,20 +55,21 @@
             margin-left: 10px;
         }
         .caption{
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: bold;
         }
         .size-box-container{
             display: flex;
-            box-sizing: border-box;
             justify-content: space-between;
         }
 
-        .size-radio{
+        /* 1. Sembunyikan lingkaran radio button bawaan browser */
+        .size-radio {
             display: none;
         }
 
-        .size-box{
+        /* 2. Styling box ukuran sepatu (menggunakan label) */
+        .size-box {
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -76,41 +80,22 @@
             color: rgb(97, 97, 97);
             border-radius: 10px;
             font-weight: bold;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
 
-        .size-box:hover{
-            border: 3px solid black;
+        /* 3. Efek hover saat mouse berada di atas box yang belum dipilih */
+        .size-box:hover {
+            border-color: rgb(80, 80, 255);
+            color: rgb(80, 80, 255);
         }
 
-        .size-radio:checked + .size-box{
+        /* 4. Trik CSS: Ubah gaya .size-box saat radio button di sebelahnya dalam kondisi :checked */
+        .size-radio:checked + .size-box {
+            background-color: rgb(80, 80, 255);
+            border-color: rgb(80, 80, 255);
             color: white;
-            background-color: black;
         }
-
-        .checkout{
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 15px;
-            width: 100%;
-            height: 50px;
-            color: white;
-            background-color: black;
-            border-radius: 10px;
-            box-shadow: 0 0 10px black;
-            cursor: pointer;
-        }        
-
-        .checkout:active{
-            box-shadow: 0 0 0 0;
-            scale: calc(0.98);
-        }
-        
     </style>
 </head>
 <body>
@@ -123,26 +108,24 @@
         <span class="price">Rp 1,899,000</span>
         <sub>Rp 2,299,000</sub>
         <p class="caption">Pilih ukuran (US):</p>
+        
         <div class="size-box-container">
-
-            <input type="radio" name="size" id="size8" class="size-radio" value="8">
+            <!-- Setiap input memiliki ID unik dan label yang terhubung lewat atribut 'for' -->
+            <input type="radio" name="size" id="size8" class="size-radio">
             <label for="size8" class="size-box">8</label>
 
-            <input type="radio" name="size" id="size9" class="size-radio" value="9">
+            <input type="radio" name="size" id="size9" class="size-radio">
             <label for="size9" class="size-box">9</label>
 
-            <input type="radio" name="size" id="size10" class="size-radio" value="10">
+            <input type="radio" name="size" id="size10" class="size-radio">
             <label for="size10" class="size-box">10</label>
 
-            <input type="radio" name="size" id="size11" class="size-radio" value="11">
+            <input type="radio" name="size" id="size11" class="size-radio">
             <label for="size11" class="size-box">11</label>
 
-            <input type="radio" name="size" id="size12" class="size-radio" value="12">
+            <input type="radio" name="size" id="size12" class="size-radio">
             <label for="size12" class="size-box">12</label>
         </div>
-
-        <button class="checkout">Tambahkan ke keranjang</button>
-
     </div>
 </body>
 </html>
