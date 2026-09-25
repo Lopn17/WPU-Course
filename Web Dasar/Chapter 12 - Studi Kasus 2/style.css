@@ -73,7 +73,7 @@ main .profile-card .bio{
 }
 
 main .profile-card .bio p{
-    margin-bottom: 15px;
+    margin: 20px 0 15px 0;
     text-align: justify;
 }
 
